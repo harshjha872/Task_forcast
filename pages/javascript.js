@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchingData = async () => {
-      let { data, error } = await supabase.from("chat_message").select();
+      let { data, error } = await supabase.from("javascript").select();
 
       setContent(() => {
         return data.map((ele) => (
@@ -30,7 +30,7 @@ export default function Home() {
         .channel("custom-insert-channel")
         .on(
           "postgres_changes",
-          { event: "INSERT", schema: "public", table: "chat_message" },
+          { event: "INSERT", schema: "public", table: "javascript" },
           (payload) => {
             console.log(payload);
             setContent((prev) => {
