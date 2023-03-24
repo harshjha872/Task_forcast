@@ -1,3 +1,4 @@
+import "@/styles/globals.css";
 import LogNav from "@/Components/LogNav";
 import Channel from "@/Components/Channel";
 
